@@ -7,7 +7,7 @@ import LogoImage from "@/assets/images/logo.avif";
 const Header = () => {
   return (
     <header className={S.header}>
-      <Link href="/">
+      <Link href="https://maple-nickname.vercel.app">
         <Image src={LogoImage} alt="logo" />
         <h1 className="gamjaFlowerRegular">뉴네임 옥션 경매 이름 리스트</h1>
       </Link>
