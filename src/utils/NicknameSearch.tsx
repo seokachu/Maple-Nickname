@@ -43,6 +43,7 @@ const NicknameSearch = ({ selectedDate }: SelectedDateProps) => {
         placeholder="닉네임을 입력해 주세요."
         value={search}
         onChange={handleFormSearch}
+        autoFocus
       />
     </div>
   );

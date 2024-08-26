@@ -1,0 +1,117 @@
+/*---------- Form -----------*/
+.searchForm {
+  width: 600px;
+  background-color: var(--primary-color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.searchForm > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.searchForm label {
+  font-size: 18px;
+}
+
+.searchForm input {
+  padding: 10px 15px;
+  width: 300px;
+  border-radius: 8px;
+  border: none;
+}
+
+.searchForm input:focus {
+  outline: 1px solid var(--secondary-color);
+}
+
+.searchForm input:placeholder {
+  color: #fff;
+}
+
+.searchForm select {
+  width: 220px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  text-indent: 10px;
+}
+
+.searchForm button {
+  background-color: var(--background-color);
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+
+/*---------- NicknameList -----------*/
+.nicknameTitle {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nicknameTitle li {
+  width: 150px;
+  padding: 15px 0;
+  border: 1px solid #ccc;
+  border-left: transparent;
+  background-color: var(--background-color);
+}
+
+.nicknameTitle li:first-child {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.nicknameCount {
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+.nicknameList {
+}
+
+.nicknameList li {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 600px;
+}
+
+.nicknameList li p {
+  width: 600px;
+  border-right: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.nicknameList li p:last-of-type {
+  border-right: none;
+}
+
+/*---------- Pagination -----------*/
+.pageWrapper {
+  margin-top: 34px;
+}
+
+.buttonInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttonInner button {
+  font-size: 16px;
+}
+
+.buttonInner span {
+  transform: translateY(-3px);
+}

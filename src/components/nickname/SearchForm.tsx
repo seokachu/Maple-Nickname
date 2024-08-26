@@ -1,6 +1,7 @@
 "use client";
 import NicknameSearch from "@/utils/NicknameSearch";
 import React, { useId, useState } from "react";
+import S from "@/styles/nickname.module.css";
 
 const SearchForm = () => {
   const id = useId();
@@ -11,7 +12,7 @@ const SearchForm = () => {
   };
 
   return (
-    <form>
+    <form className={S.searchForm}>
       <div>
         <label htmlFor={`${id}-date`}>경매 시작일</label>
         <select
@@ -34,6 +35,7 @@ const SearchForm = () => {
           <option value="09-09">09-09</option>
           <option value="09-10">09-10</option>
         </select>
+        <button>초기화</button>
       </div>
       <NicknameSearch selectedDate={selectedDate} />
     </form>

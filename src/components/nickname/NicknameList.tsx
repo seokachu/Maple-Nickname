@@ -2,17 +2,19 @@ import React from "react";
 import NicknameItem from "./NicknameItem";
 import Pagination from "./Pagination";
 import NicknameCount from "./NicknameCount";
+import S from "@/styles/nickname.module.css";
 
 const NicknameList = () => {
   return (
     <>
-      <ul>
+      <NicknameCount />
+      <ul className={S.nicknameTitle}>
+        <li>번호</li>
         <li>닉네임</li>
-        <li>이름 생성 시도 횟수</li>
+        <li>시도 횟수</li>
         <li>경매 시작일</li>
       </ul>
-      <NicknameCount />
-      <ul>
+      <ul className={S.nicknameList}>
         <NicknameItem />
       </ul>
       <Pagination />

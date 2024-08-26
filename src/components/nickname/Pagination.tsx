@@ -5,13 +5,13 @@ import {
   usePageSize,
   useSetActionsData,
 } from "@/shared/data-store";
-import React from "react";
+import S from "@/styles/nickname.module.css";
 
 const Pagination = () => {
   const page = usePage();
   const pageSize = usePageSize();
   const filteredData = useFilteredData();
-  const { setPage, setFilteredData } = useSetActionsData();
+  const { setPage } = useSetActionsData();
 
   // 전체 페이지 수 계산
   const totalPages = Math.ceil(filteredData.length / pageSize);
@@ -24,8 +24,8 @@ const Pagination = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className={S.pageWrapper}>
+      <div className={S.buttonInner}>
         <button
           onClick={() => handlePageChange(page - 1)}
           disabled={page === 1}
@@ -33,7 +33,7 @@ const Pagination = () => {
           이전
         </button>
         <span>
-          Page {page} of {totalPages}
+          {page} &#47; {totalPages}
         </span>
         <button
           onClick={() => handlePageChange(page + 1)}
