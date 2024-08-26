@@ -6,6 +6,7 @@ import {
   useSetActionsData,
 } from "@/shared/data-store";
 import S from "@/styles/nickname.module.css";
+import { useEffect } from "react";
 
 const Pagination = () => {
   const page = usePage();
@@ -22,6 +23,14 @@ const Pagination = () => {
       setPage(newPage);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [handlePageChange]);
 
   return (
     <div className={S.pageWrapper}>
