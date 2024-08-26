@@ -1,28 +1,6 @@
 import { create } from "zustand";
 import auctionData from "@/data/auction_name.json";
-
-interface AuctionItem {
-  a: string;
-  c: number;
-  b: string;
-}
-
-interface ConnectData {
-  data: AuctionItem[];
-  filteredData: AuctionItem[];
-  page: number;
-  pageSize: number;
-  search: string;
-  displayData: AuctionItem[];
-  actions: {
-    setData: (newData: AuctionItem[]) => void;
-    setFilteredData: (newFilteredData: AuctionItem[]) => void;
-    setPage: (page: number) => void;
-    setPageSize: (pageSize: number) => void;
-    setSearch: (search: string) => void;
-    setDisplayData: (display: AuctionItem[]) => void;
-  };
-}
+import { ConnectData } from "@/types";
 
 const useActionStore = create<ConnectData>((set) => ({
   data: auctionData,

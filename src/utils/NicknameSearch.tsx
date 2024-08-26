@@ -4,11 +4,8 @@ import {
   useSearch,
   useSetActionsData,
 } from "@/shared/data-store";
+import { SelectedDateProps } from "@/types";
 import React, { useEffect, useId } from "react";
-
-interface SelectedDateProps {
-  selectedDate: string;
-}
 
 const NicknameSearch = ({ selectedDate }: SelectedDateProps) => {
   const id = useId();

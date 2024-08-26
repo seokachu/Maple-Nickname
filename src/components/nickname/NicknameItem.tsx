@@ -1,17 +1,9 @@
 "use client";
-import {
-  useDisplayData,
-  useFilteredData,
-  usePage,
-  usePageSize,
-  useSearch,
-} from "@/shared/data-store";
+import { useDisplayData, usePage, usePageSize } from "@/shared/data-store";
 
 const NicknameItem = () => {
-  const filteredData = useFilteredData();
   const page = usePage();
   const pageSize = usePageSize();
-  const search = useSearch();
   const displayData = useDisplayData();
 
   const displayDataResult = displayData.slice(
