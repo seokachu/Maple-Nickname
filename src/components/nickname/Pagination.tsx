@@ -30,7 +30,7 @@ const Pagination = () => {
       left: 0,
       behavior: "smooth",
     });
-  }, [handlePageChange]);
+  }, [page]);
 
   return (
     <div className={S.pageWrapper}>
