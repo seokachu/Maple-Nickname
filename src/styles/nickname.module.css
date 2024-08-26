@@ -75,9 +75,6 @@
   font-size: 20px;
 }
 
-.nicknameList {
-}
-
 .nicknameList li {
   display: flex;
   align-items: center;
@@ -114,4 +111,71 @@
 
 .buttonInner span {
   transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  /* form */
+  .searchForm {
+    padding: 40px 20px;
+    width: 100%;
+  }
+
+  .searchForm > div {
+    justify-content: flex-start;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .searchForm label {
+    font-size: 14px;
+  }
+
+  .searchForm button {
+    white-space: nowrap;
+  }
+
+  .searchForm input {
+    width: 100%;
+  }
+
+  .searchForm select {
+    width: 270px;
+  }
+
+  /* nicknamelist */
+  .nicknameTitle {
+    width: 100%;
+  }
+
+  .nicknameTitle li {
+    width: 25%;
+  }
+
+  .nicknameCount {
+    font-size: 16px;
+  }
+
+  .nicknameList li {
+    width: 100%;
+  }
+
+  .nicknameList li p {
+    width: 25%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 470px) {
+  /* form */
+  .searchForm > div {
+    flex-wrap: wrap;
+  }
+
+  .searchForm button {
+    width: 100%;
+  }
+
+  .searchForm select {
+    width: 310px;
+  }
 }
