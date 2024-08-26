@@ -136,6 +136,7 @@
 
   .searchForm input {
     width: 100%;
+    font-size: 16px;
   }
 
   .searchForm select {
