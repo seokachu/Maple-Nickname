@@ -1,18 +1,29 @@
 "use client";
 import NicknameSearch from "@/utils/NicknameSearch";
-import React, { useId, useState } from "react";
+import React, { ChangeEvent, useId, useState } from "react";
 import S from "@/styles/nickname.module.css";
+import { useSetActionsData } from "@/shared/data-store";
 
 const SearchForm = () => {
   const id = useId();
   const [selectedDate, setSelectedDate] = useState<string>("");
+  const { setSearch } = useSetActionsData();
 
   const handleDateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedDate(e.target.value);
   };
 
+  const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
+
+  const onClickReset = () => {
+    setSelectedDate("");
+    setSearch("");
+  };
+
   return (
-    <form className={S.searchForm}>
+    <form className={S.searchForm} onSubmit={handleSubmit}>
       <div>
         <label htmlFor={`${id}-date`}>경매 시작일</label>
         <select
@@ -35,7 +46,7 @@ const SearchForm = () => {
           <option value="09-09">09-09</option>
           <option value="09-10">09-10</option>
         </select>
-        <button>초기화</button>
+        <button onClick={onClickReset}>초기화</button>
       </div>
       <NicknameSearch selectedDate={selectedDate} />
     </form>
